@@ -408,13 +408,6 @@ if (${use_installed_dependencies})
         INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/azureiot
     )
 
-    install(EXPORT azure_iot_sdksTargets
-        FILE
-            "${PROJECT_NAME}Targets.cmake"
-        DESTINATION
-            ${package_location}
-    )
-
     install(
         FILES
             "configs/${PROJECT_NAME}Config.cmake"
