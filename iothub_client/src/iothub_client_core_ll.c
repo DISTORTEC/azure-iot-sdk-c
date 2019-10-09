@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #include <stdlib.h>
-#include <stdint.h>
+#include <inttypes.h>
 #include <string.h>
 #include <errno.h>
 
@@ -2278,7 +2278,7 @@ IOTHUB_CLIENT_RESULT IoTHubClientCore_LL_SetOption(IOTHUB_CLIENT_CORE_LL_HANDLE 
             if (percentage > 100)
             {
                 /*Codes_SRS_IOTHUBCLIENT_LL_10_036: [Calling IoTHubClientCore_LL_SetOption with value > 100 shall return `IOTHUB_CLIENT_ERRROR`. ]*/
-                LogError("The value of diag_sampling_percentage is out of range [0, 100]: %u", percentage);
+                LogError("The value of diag_sampling_percentage is out of range [0, 100]: %" PRIu32, percentage);
                 result = IOTHUB_CLIENT_ERROR;
             }
             else
